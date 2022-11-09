@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "687623043998",
+    "project_id": "qunatum-task",
+    "storage_bucket": "qunatum-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687623043998:android:9a65c54df5451f294bf48f",
+        "android_client_info": {
+          "package_name": "com.example.quantum_assignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687623043998-r1io78f1coadsu6abgf3p5r05op075tb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.quantum_assignment",
+            "certificate_hash": "57d4fac99b87401eed93dd9fe32b1de4d205bb49"
+          }
+        },
+        {
+          "client_id": "687623043998-n36bldf661291is4bft18b60qlhsd1fp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4oWuQ6Zp-TQmHX-4tgLF7KT_O25iHvVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687623043998-n36bldf661291is4bft18b60qlhsd1fp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "687623043998-gjvfj4n0c0ksl3pc1oq1668hfrpaklp0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.quantumAssignment"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
