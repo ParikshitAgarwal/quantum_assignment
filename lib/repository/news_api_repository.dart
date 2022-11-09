@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:hive/hive.dart';
 import 'package:http/http.dart' as http;
 
+import '../api_key/api_key.dart';
 import '../models/article_model.dart';
 
 class NewsApiRepsitory {
@@ -10,7 +11,7 @@ class NewsApiRepsitory {
   List<ArticleModel> newsList = [];
   Future<void> getNews() async {
     var url = Uri.parse(
-        "https://newsapi.org/v2/top-headlines?country=in&apiKey=e27e79c0932a4445b853ddfea265ddde");
+        "https://newsapi.org/v2/top-headlines?country=in&apiKey=$API_KEY");
     news = Hive.box("news_api_box").get("news_api", defaultValue: []);
     print(news);
     if (news.isEmpty) {
