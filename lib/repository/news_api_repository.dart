@@ -33,7 +33,12 @@ class NewsApiRepsitory {
           urlToImage: value["urlToImage"] ?? "",
           publishedAt: value["publishedAt"] ?? "",
           content: value["content"] ?? "");
-      value["author"] != null ? newsList.add(articleModel) : "";
+      value["author"] != null &&
+              value["urlToImage"] != null &&
+              value["title"] != null &&
+              value["description"] != null
+          ? newsList.add(articleModel)
+          : "";
     });
   }
 }

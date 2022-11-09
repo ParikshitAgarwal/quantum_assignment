@@ -75,14 +75,11 @@ class _AuthScreenState extends State<AuthScreen> {
         ]),
         bottomNavigationBar: InkWell(
           onTap: () {
-            formState.validate();
+            // formState.validate();
 
-            tabBarIndex == 0 ? signInUser : signUpUser;
+            tabBarIndex == 0 ? signInUser() : signUpUser();
             // formState.reset();
-          }
-
-          // formState.validate();
-          ,
+          },
           child: Material(
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(24), topRight: Radius.circular(24)),
