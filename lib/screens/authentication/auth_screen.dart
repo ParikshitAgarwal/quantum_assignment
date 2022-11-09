@@ -13,6 +13,7 @@ class AuthScreen extends StatefulWidget {
 
 class _AuthScreenState extends State<AuthScreen> {
   int tabBarIndex = 0;
+  bool isTicked = false;
   String name = "";
   String email = "";
   String password = "";
@@ -26,12 +27,13 @@ class _AuthScreenState extends State<AuthScreen> {
   }
 
   void signUpdataRetriveFunc(String name, String email, String password,
-      String phoneNum, FormState formState) {
+      String phoneNum, FormState formState, bool isTicked) {
     this.name = name;
     this.email = email;
     this.password = password;
     this.phoneNum = phoneNum;
     this.formState = formState;
+    this.isTicked = isTicked;
   }
 
   void signUpUser() async {
@@ -77,7 +79,13 @@ class _AuthScreenState extends State<AuthScreen> {
           onTap: () {
             // formState.validate();
 
-            tabBarIndex == 0 ? signInUser() : signUpUser();
+            tabBarIndex == 0
+                ? signInUser()
+                : isTicked
+                    ? signUpUser()
+                    : ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                        content: Text(
+                            "Please accept terms & condition to move ahead")));
             // formState.reset();
           },
           child: Material(
@@ -90,7 +98,7 @@ class _AuthScreenState extends State<AuthScreen> {
                 child: Center(
                   child: Text(
                     tabBarIndex == 0 ? "LOGIN" : "REGISTER",
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+                    style: const TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 )),
           ),
